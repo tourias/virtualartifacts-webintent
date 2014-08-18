@@ -1,6 +1,8 @@
 # WebIntent Android Plugin for Cordova 3.X #
 By Boris Smus
 
+EXTRA_STREAM works in this version
+
 Phonegap/Cordova 2.X version available at the [WebIntent](https://github.com/phonegap/phonegap-plugins/tree/master/Android/WebIntent) plugin site.
 
 ## Adding the Plugin to your project ##
