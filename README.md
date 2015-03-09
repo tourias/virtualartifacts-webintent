@@ -86,6 +86,7 @@ Gets called when onNewIntent is called for the parent activity. Used in only cer
         }
     });
 
+
 ### sendBroadcast ###
 Sends a custom intent passing optional extras
 
@@ -97,6 +98,17 @@ Sends a custom intent passing optional extras
             }, function() {
             }, function() {
     });
+
+### removeExtra ###
+Removes the specified extra
+
+	window.plugins.webintent.removeExtra(window.plugins.webintent.EXTRA_TEXT,
+        function() {
+            // Extra was removed
+        }, function() {
+            // Something really bad happened.
+        }
+    );
 
 ## Licence ##
 
