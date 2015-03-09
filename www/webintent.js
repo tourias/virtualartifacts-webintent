@@ -66,7 +66,7 @@
     };
 
     window.webintent = new WebIntent();
-    
+
     // backwards compatibility
     window.plugins = window.plugins || {};
     window.plugins.webintent = window.webintent;
