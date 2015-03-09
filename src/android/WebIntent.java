@@ -122,8 +122,7 @@ public class WebIntent extends CordovaPlugin {
                 callbackContext.sendPluginResult(result);
                 return true;
                 //return result;
-            } else if (action.equals("sendBroadcast")) 
-            {
+            } else if (action.equals("sendBroadcast")) {
                 if (args.length() != 1) {
                     //return new PluginResult(PluginResult.Status.INVALID_ACTION);
                     callbackContext.sendPluginResult(new PluginResult(PluginResult.Status.INVALID_ACTION));
@@ -150,7 +149,17 @@ public class WebIntent extends CordovaPlugin {
                 //return new PluginResult(PluginResult.Status.OK);
                 callbackContext.sendPluginResult(new PluginResult(PluginResult.Status.OK));
                 return true;
+            } else if (action.equals("removeExtra")) {
+                if (args.length() != 1) {
+                    callbackContext.sendPluginResult(new PluginResult(PluginResult.Status.INVALID_ACTION));
+                    return false;
+                }
+                Intent i = ((CordovaActivity)this.cordova.getActivity()).getIntent();
+                String extraName = args.getString(0);
+                i.removeExtra(extraName);
+                callbackContext.sendPluginResult(new PluginResult(PluginResult.Status.OK));
             }
+
             //return new PluginResult(PluginResult.Status.INVALID_ACTION);
             callbackContext.sendPluginResult(new PluginResult(PluginResult.Status.INVALID_ACTION));
             return false;
