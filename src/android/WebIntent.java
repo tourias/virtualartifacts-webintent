@@ -175,6 +175,9 @@ public class WebIntent extends CordovaPlugin {
     @Override
     public void onNewIntent(Intent intent) {
 
+        super.onNewIntent(intent);
+        ((CordovaActivity)this.cordova.getActivity()).setIntent(intent);
+
         if (this.onNewIntentCallbackContext != null) {
             PluginResult result = new PluginResult(PluginResult.Status.OK, intent.getDataString());
             result.setKeepCallback(true);
