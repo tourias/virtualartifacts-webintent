@@ -65,8 +65,16 @@
         }, 'WebIntent', 'sendBroadcast', [params]);
     };
 
+    WebIntent.prototype.removeExtra = function(params, success, fail) {
+        return cordova.exec(function(args) {
+            success(args);
+        }, function(args) {
+            fail(args);
+        }, 'WebIntent', 'removeExtra', [params]);
+    };
+
     window.webintent = new WebIntent();
-    
+
     // backwards compatibility
     window.plugins = window.plugins || {};
     window.plugins.webintent = window.webintent;
