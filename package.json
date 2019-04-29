@@ -1,0 +1,25 @@
+{
+  "name": "com.virtualartifacts.webintent",
+  "version": "1.0.0",
+  "description": "package.json for virtualarticats-webintent plugin",
+  "cordova": {
+    "id": "com.virtualartifacts.webintent",
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "private"
+  },
+  "keywords": [],
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=6.0.0"
+    }
+  ],
+  "author": "",
+  "license": "ISC"
+}
